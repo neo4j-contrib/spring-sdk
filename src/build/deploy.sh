@@ -1,11 +1,11 @@
 #!/bin/bash -e
 # depends libxml-simple-perl
 
-tcrepo=http://builder.neo4j.org/guestAuth/repository/download/bt65/lastSuccessful
+tcrepo=http://builder.neo4j.org/guestAuth/repository/download/bt167/lastSuccessful
 rootpathdist=dist
 
 function work {
-    upload_packages neo4j-community neo4j-advanced neo4j-enterprise
+    upload_packages neo4j-spring-community neo4j-spring-advanced neo4j-spring-enterprise
 }
 
 function run_command {
