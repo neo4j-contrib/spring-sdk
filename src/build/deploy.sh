@@ -31,8 +31,8 @@ function upload_package {
     version=$2
     filenameWindows=$artifact-$version-windows.zip
     filenameUnix=$artifact-$version-unix.tar.gz
-    fetch_artifact standalone $filenameWindows
-    fetch_artifact standalone $filenameUnix
+    fetch_artifact neo4j-spring-sdk $filenameWindows
+    fetch_artifact neo4j-spring-sdk $filenameUnix
     upload_file $filenameWindows
     upload_file $filenameUnix
 }
