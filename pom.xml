@@ -32,6 +32,7 @@
     <!-- other filter properties -->
     <wrapper.conf>conf/neo4j-wrapper.conf</wrapper.conf>
     <neo4j.version>1.5-SNAPSHOT</neo4j.version>
+    <spring-data-neo4j.version>2.0.0.BUILD-SNAPSHOT</spring-data-neo4j.version>
     <windows-wrapper.version>2-SNAPSHOT</windows-wrapper.version>
     <windows-wrapper.filename>windows-service-wrapper-${windows-wrapper.version}.jar</windows-wrapper.filename>
     
@@ -150,7 +151,7 @@ terms of the relevant Commercial Agreement.
               <appendAssemblyId>true</appendAssemblyId>
             </configuration>
           </execution>
- 		  <execution>
+       <execution>
             <id>advanced-windows-dist</id>
             <phase>package</phase>
             <goals>
@@ -284,168 +285,232 @@ terms of the relevant Commercial Agreement.
     </plugins>
   </build>
 
-  <repositories>
-    <repository>
-      <id>neo4j-release-repository</id>
-      <name>Neo4j Maven 2 release repository</name>
-      <url>http://m2.neo4j.org/releases</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>neo4j-snapshot-repository</id>
-      <name>Neo4j Maven 2 snapshot repository</name>
-      <url>http://m2.neo4j.org/snapshots</url>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-    </repository>
-     <repository>
-        <id>java.net</id>
-        <name>maven release repository</name>
-        <url>http://download.java.net/maven/2</url>
-      </repository>
-  </repositories>
-
   <dependencies>
     <dependency>
-      <groupId>org.neo4j.app</groupId>
-      <artifactId>windows-service-wrapper</artifactId>
-      <version>${windows-wrapper.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.neo4j</groupId>
-      <artifactId>neo4j-udc</artifactId>
+      <groupId>org.neo4j.assembly</groupId>
+      <artifactId>neo4j-standalone</artifactId>
       <version>${neo4j.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.neo4j</groupId>
-      <artifactId>neo4j-community</artifactId>
-      <version>${neo4j.version}</version>
+      <type>pom</type>
       <exclusions>
         <exclusion>
-          <artifactId>neo4j-udc</artifactId>
-          <groupId>org.neo4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jcl-over-slf4j</artifactId>
+          <groupId>org.slf4j</groupId>
         </exclusion>
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.neo4j</groupId>
-      <artifactId>neo4j-advanced</artifactId>
-      <version>${neo4j.version}</version>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-neo4j</artifactId>
+      <version>${spring-data-neo4j.version}</version>
       <exclusions>
         <exclusion>
-          <artifactId>neo4j-udc</artifactId>
-          <groupId>org.neo4j</groupId>
+          <artifactId>spring-beans</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-tx</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-aspects</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-orm</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>aspectjrt</artifactId>
+          <groupId>org.aspectj</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>cglib</artifactId>
+          <groupId>cglib</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jcl-over-slf4j</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>validation-api</artifactId>
+          <groupId>javax.validation</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>hibernate-jpa-2.0-api</artifactId>
+          <groupId>org.hibernate.javax.persistence</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>slf4j-log4j12</artifactId>
+          <groupId>org.slf4j</groupId>
         </exclusion>
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.neo4j</groupId>
-      <artifactId>neo4j-enterprise</artifactId>
-      <version>${neo4j.version}</version>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-neo4j-aspects</artifactId>
+      <version>${spring-data-neo4j.version}</version>
       <exclusions>
         <exclusion>
-          <artifactId>neo4j-udc</artifactId>
-          <groupId>org.neo4j</groupId>
+          <artifactId>spring-beans</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-tx</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-aspects</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-orm</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>aspectjrt</artifactId>
+          <groupId>org.aspectj</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>cglib</artifactId>
+          <groupId>cglib</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jcl-over-slf4j</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>validation-api</artifactId>
+          <groupId>javax.validation</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>hibernate-jpa-2.0-api</artifactId>
+          <groupId>org.hibernate.javax.persistence</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>slf4j-log4j12</artifactId>
+          <groupId>org.slf4j</groupId>
         </exclusion>
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.neo4j</groupId>
-      <artifactId>neo4j</artifactId>
-      <version>${neo4j.version}</version>
-      <classifier>javadoc</classifier>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-neo4j-cross-store</artifactId>
+      <version>${spring-data-neo4j.version}</version>
       <exclusions>
         <exclusion>
-          <artifactId>neo4j-udc</artifactId>
-          <groupId>org.neo4j</groupId>
+          <artifactId>spring-beans</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-tx</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-aspects</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-orm</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>aspectjrt</artifactId>
+          <groupId>org.aspectj</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>cglib</artifactId>
+          <groupId>cglib</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jcl-over-slf4j</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>validation-api</artifactId>
+          <groupId>javax.validation</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>hibernate-jpa-2.0-api</artifactId>
+          <groupId>org.hibernate.javax.persistence</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>slf4j-log4j12</artifactId>
+          <groupId>org.slf4j</groupId>
         </exclusion>
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.neo4j.app</groupId>
-      <artifactId>neo4j-server</artifactId>
-      <version>${neo4j.version}</version>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-neo4j-rest</artifactId>
+      <version>${spring-data-neo4j.version}</version>
       <exclusions>
         <exclusion>
-          <artifactId>neo4j-udc</artifactId>
-          <groupId>org.neo4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
         </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.neo4j.app</groupId>
-      <artifactId>neo4j-server-advanced</artifactId>
-      <version>${neo4j.version}</version>
-      <exclusions>
         <exclusion>
-          <artifactId>neo4j-udc</artifactId>
-          <groupId>org.neo4j</groupId>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
         </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.neo4j.app</groupId>
-      <artifactId>neo4j-server-enterprise</artifactId>
-      <version>${neo4j.version}</version>
-      <exclusions>
         <exclusion>
-          <artifactId>neo4j-udc</artifactId>
-          <groupId>org.neo4j</groupId>
+          <artifactId>jcl-over-slf4j</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>slf4j-log4j12</artifactId>
+          <groupId>org.slf4j</groupId>
         </exclusion>
       </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.neo4j.app</groupId>
-      <artifactId>neo4j-server</artifactId>
-      <version>${neo4j.version}</version>
-      <classifier>static-web</classifier> 
-    </dependency>
-
-    <dependency>
-      <groupId>org.neo4j.doc</groupId>
-      <artifactId>neo4j-manual</artifactId>
-      <version>${neo4j.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.neo4j.doc</groupId>
-      <artifactId>neo4j-manual</artifactId>
-      <version>${neo4j.version}</version>
-      <classifier>manpages</classifier>
-    </dependency>
-    <dependency>
-      <groupId>org.neo4j.doc</groupId>
-      <artifactId>neo4j-manual</artifactId>
-      <version>${neo4j.version}</version>
-      <classifier>manpagesenterprise</classifier>
-    </dependency>
-    <dependency>
-      <groupId>org.neo4j.doc</groupId>
-      <artifactId>neo4j-manual</artifactId>
-      <version>${neo4j.version}</version>
-      <classifier>upgrade</classifier>
-      <type>zip</type>
-    </dependency>
-    <dependency>
-      <groupId>org.neo4j.server.plugin</groupId>
-      <artifactId>neo4j-gremlin-plugin</artifactId>
-      <version>${neo4j.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.neo4j.server.plugin</groupId>
-      <artifactId>neo4j-cypher-plugin</artifactId>
-      <version>${neo4j.version}</version>
     </dependency>
   </dependencies>
+
+  <repositories>
+    <!-- repository>
+      <id>spring-maven-snapshot</id>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <name>Springframework Maven SNAPSHOT Repository</name>
+      <url>http://maven.springframework.org/snapshot</url>
+    </repository -->
+    <repository>
+     <id>spring-snapshot</id>
+     <name>Spring Maven SNAPSHOT Repository</name>
+     <url>http://s3.amazonaws.com/maven.springframework.org/snapshot</url>
+    </repository>
+  </repositories>
 
   <distributionManagement>
     <site>
