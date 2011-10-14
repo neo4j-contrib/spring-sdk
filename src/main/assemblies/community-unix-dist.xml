@@ -78,6 +78,20 @@
 
   <dependencySets>
     <dependencySet>
+      <outputDirectory>/spring</outputDirectory>
+      <directoryMode>0755</directoryMode>
+      <fileMode>0755</fileMode>
+      <unpack>false</unpack>
+      <useProjectArtifact>false</useProjectArtifact>
+      <includes>
+        <include>org.springframework.data:*</include>
+      </includes>
+      <excludes>
+        <exclude>*:tests:*</exclude>
+        <exclude>org.springframework.data:spring-data-neo4j-docs:*</exclude>
+      </excludes>
+    </dependencySet>
+    <dependencySet>
       <outputDirectory>/lib</outputDirectory>
       <directoryMode>0755</directoryMode>
       <fileMode>0755</fileMode>
@@ -122,6 +136,7 @@
         <exclude>org.neo4j:*</exclude>
         <exclude>org.neo4j.examples:*</exclude>
         <exclude>org.neo4j.doc:*</exclude>
+        <exclude>org.springframework.data:*</exclude>
         <exclude>org.apache.geronimo.specs:geronimo-jta_1.1_spec</exclude>
         <exclude>org.apache.servicemix.bundles:org.apache.servicemix.bundles.jline</exclude>
         <exclude>org.apache.servicemix.bundles:org.apache.servicemix.bundles.lucene</exclude>

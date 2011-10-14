@@ -291,20 +291,6 @@ terms of the relevant Commercial Agreement.
       <artifactId>neo4j-standalone</artifactId>
       <version>${neo4j.version}</version>
       <type>pom</type>
-      <exclusions>
-        <exclusion>
-          <artifactId>slf4j-api</artifactId>
-          <groupId>org.slf4j</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>log4j</artifactId>
-          <groupId>log4j</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>jcl-over-slf4j</artifactId>
-          <groupId>org.slf4j</groupId>
-        </exclusion>
-      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.springframework.data</groupId>
@@ -493,6 +479,12 @@ terms of the relevant Commercial Agreement.
           <groupId>org.slf4j</groupId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-neo4j-docs</artifactId>
+      <version>${spring-data-neo4j.version}</version>
+      <type>tar.gz</type>
     </dependency>
   </dependencies>
 
