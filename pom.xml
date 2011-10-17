@@ -298,30 +298,6 @@ terms of the relevant Commercial Agreement.
       <version>${spring-data-neo4j.version}</version>
       <exclusions>
         <exclusion>
-          <artifactId>spring-beans</artifactId>
-          <groupId>org.springframework</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-tx</artifactId>
-          <groupId>org.springframework</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-aspects</artifactId>
-          <groupId>org.springframework</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-orm</artifactId>
-          <groupId>org.springframework</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>aspectjrt</artifactId>
-          <groupId>org.aspectj</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>cglib</artifactId>
-          <groupId>cglib</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>slf4j-api</artifactId>
           <groupId>org.slf4j</groupId>
         </exclusion>
@@ -332,14 +308,6 @@ terms of the relevant Commercial Agreement.
         <exclusion>
           <artifactId>jcl-over-slf4j</artifactId>
           <groupId>org.slf4j</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>validation-api</artifactId>
-          <groupId>javax.validation</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>hibernate-jpa-2.0-api</artifactId>
-          <groupId>org.hibernate.javax.persistence</groupId>
         </exclusion>
         <exclusion>
           <artifactId>slf4j-log4j12</artifactId>
@@ -353,30 +321,6 @@ terms of the relevant Commercial Agreement.
       <version>${spring-data-neo4j.version}</version>
       <exclusions>
         <exclusion>
-          <artifactId>spring-beans</artifactId>
-          <groupId>org.springframework</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-tx</artifactId>
-          <groupId>org.springframework</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-aspects</artifactId>
-          <groupId>org.springframework</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-orm</artifactId>
-          <groupId>org.springframework</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>aspectjrt</artifactId>
-          <groupId>org.aspectj</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>cglib</artifactId>
-          <groupId>cglib</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>slf4j-api</artifactId>
           <groupId>org.slf4j</groupId>
         </exclusion>
@@ -387,14 +331,6 @@ terms of the relevant Commercial Agreement.
         <exclusion>
           <artifactId>jcl-over-slf4j</artifactId>
           <groupId>org.slf4j</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>validation-api</artifactId>
-          <groupId>javax.validation</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>hibernate-jpa-2.0-api</artifactId>
-          <groupId>org.hibernate.javax.persistence</groupId>
         </exclusion>
         <exclusion>
           <artifactId>slf4j-log4j12</artifactId>
@@ -408,30 +344,6 @@ terms of the relevant Commercial Agreement.
       <version>${spring-data-neo4j.version}</version>
       <exclusions>
         <exclusion>
-          <artifactId>spring-beans</artifactId>
-          <groupId>org.springframework</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-tx</artifactId>
-          <groupId>org.springframework</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-aspects</artifactId>
-          <groupId>org.springframework</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>spring-orm</artifactId>
-          <groupId>org.springframework</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>aspectjrt</artifactId>
-          <groupId>org.aspectj</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>cglib</artifactId>
-          <groupId>cglib</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>slf4j-api</artifactId>
           <groupId>org.slf4j</groupId>
         </exclusion>
@@ -442,14 +354,6 @@ terms of the relevant Commercial Agreement.
         <exclusion>
           <artifactId>jcl-over-slf4j</artifactId>
           <groupId>org.slf4j</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>validation-api</artifactId>
-          <groupId>javax.validation</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>hibernate-jpa-2.0-api</artifactId>
-          <groupId>org.hibernate.javax.persistence</groupId>
         </exclusion>
         <exclusion>
           <artifactId>slf4j-log4j12</artifactId>
