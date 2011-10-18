@@ -28,12 +28,12 @@
   <fileSets>
 
     <!-- filter plain text -->
-    <!-- fileSet>
+    <fileSet>
       <directory>src/main/distribution/text/common</directory>
       <outputDirectory>/</outputDirectory>
       <lineEnding>unix</lineEnding>
       <filtered>true</filtered>
-    </fileSet -->
+    </fileSet>
     <fileSet>
       <directory>src/main/distribution/text/community</directory>
       <outputDirectory>/</outputDirectory>
@@ -51,7 +51,7 @@
     </fileSet>
     <!-- filter and chmod 755 shell scripts -->
     <fileSet>
-      <directory>../standalone/src/main/distribution/shell-scripts</directory>
+      <directory>src/main/distribution/shell-scripts</directory>
       <outputDirectory>/</outputDirectory>
       <lineEnding>unix</lineEnding>
       <fileMode>0755</fileMode>

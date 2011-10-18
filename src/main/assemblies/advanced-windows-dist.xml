@@ -29,6 +29,12 @@
 
     <!-- filter plain text -->
     <fileSet>
+      <directory>src/main/distribution/text/common</directory>
+      <outputDirectory>/</outputDirectory>
+      <lineEnding>unix</lineEnding>
+      <filtered>true</filtered>
+    </fileSet>
+    <fileSet>
       <directory>src/main/distribution/text/advanced</directory>
       <outputDirectory>/</outputDirectory>
       <lineEnding>dos</lineEnding>
