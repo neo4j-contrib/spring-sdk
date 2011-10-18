@@ -28,6 +28,12 @@
   <fileSets>
 
     <!-- filter plain text -->
+    <!-- fileSet>
+      <directory>src/main/distribution/text/common</directory>
+      <outputDirectory>/</outputDirectory>
+      <lineEnding>unix</lineEnding>
+      <filtered>true</filtered>
+    </fileSet -->
     <fileSet>
       <directory>src/main/distribution/text/community</directory>
       <outputDirectory>/</outputDirectory>
@@ -191,7 +197,7 @@
     </dependencySet>
     <!-- good relationships -->
     <dependencySet>
-      <outputDirectory>doc/manual/</outputDirectory>
+      <outputDirectory>doc/manual/spring-data-neo4j/</outputDirectory>
       <unpack>true</unpack>
       <fileMode>0444</fileMode>
       <directoryMode>0777</directoryMode>
@@ -201,19 +207,6 @@
       <unpackOptions>
         <includes>
           <include>pdf/**</include>
-        </includes>
-      </unpackOptions>
-    </dependencySet>
-    <dependencySet>
-      <outputDirectory>doc/manual/spring-html</outputDirectory>
-      <unpack>true</unpack>
-      <fileMode>0444</fileMode>
-      <directoryMode>0777</directoryMode>
-      <includes>
-        <include>org.springframework.data:spring-data-neo4j-docs:*</include>
-      </includes>
-      <unpackOptions>
-        <includes>
           <include>html/**</include>
         </includes>
       </unpackOptions>
