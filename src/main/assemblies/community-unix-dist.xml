@@ -148,7 +148,6 @@
         <exclude>org.neo4j:*</exclude>
         <exclude>org.neo4j.examples:*</exclude>
         <exclude>org.neo4j.doc:*</exclude>
-        <exclude>org.springframework.data:*</exclude>
         <exclude>org.apache.geronimo.specs:geronimo-jta_1.1_spec</exclude>
         <exclude>org.apache.servicemix.bundles:org.apache.servicemix.bundles.jline</exclude>
         <exclude>org.apache.servicemix.bundles:org.apache.servicemix.bundles.lucene</exclude>
@@ -161,6 +160,7 @@
         <exclude>org.neo4j:neo4j-enterprise</exclude>
         <exclude>*:neo4j-server-enterprise</exclude>
         <exclude>org.scala-lang:scala-library</exclude>
+        <exclude>org.springframework.data:*</exclude>
         <exclude>org.springframework:*</exclude>
         <exclude>org.neo4j.app:windows-service-wrapper:*</exclude>
         <exclude>aopalliance:*</exclude>

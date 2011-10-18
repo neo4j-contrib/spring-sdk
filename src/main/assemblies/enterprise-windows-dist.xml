@@ -91,6 +91,26 @@
   	</dependencySet>
     <dependencySet>
       <outputDirectory>/lib</outputDirectory>
+      <directoryMode>0755</directoryMode>
+      <fileMode>0755</fileMode>
+      <unpack>false</unpack>
+      <useProjectArtifact>false</useProjectArtifact>
+      <includes>
+        <include>org.springframework:*</include>
+        <include>org.springframework.data:*</include>
+        <include>org.aspectj:*</include>
+        <include>cglib:*</include>
+        <include>javax.validation:*</include>
+        <include>aopalliance:*</include>
+        <include>org.hibernate.javax.persistence:*</include>
+      </includes>
+      <excludes>
+        <exclude>*:tests:*</exclude>
+        <exclude>org.springframework.data:spring-data-neo4j-docs:*</exclude>
+      </excludes>
+    </dependencySet>
+    <dependencySet>
+      <outputDirectory>/lib</outputDirectory>
       <unpack>false</unpack>
       <useProjectArtifact>false</useProjectArtifact>
       <includes>
@@ -140,6 +160,14 @@
         <exclude>org.slf4j:log4j-over-slf4j</exclude>
         <exclude>org.scala-lang:scala-library</exclude>
         <exclude>org.neo4j.app:windows-service-wrapper:*</exclude>
+        <exclude>org.springframework.data:*</exclude>
+        <exclude>org.springframework:*</exclude>
+        <exclude>org.neo4j.app:windows-service-wrapper:*</exclude>
+        <exclude>aopalliance:*</exclude>
+        <exclude>org.aspectj:*</exclude>
+        <exclude>cglib:*</exclude>
+        <exclude>javax.validation:*</exclude>
+        <exclude>org.hibernate.javax.persistence:*</exclude>
       </excludes>
     </dependencySet>
     <dependencySet>
@@ -174,6 +202,22 @@
         <exclude>org.neo4j.doc:neo4j-manual:*:manpages</exclude>
         <exclude>org.neo4j.doc:neo4j-manual:*:manpagesenterprise</exclude>
       </excludes>
+    </dependencySet>
+    <!-- good relationships -->
+    <dependencySet>
+      <outputDirectory>doc/manual/spring-data-neo4j/</outputDirectory>
+      <unpack>true</unpack>
+      <fileMode>0444</fileMode>
+      <directoryMode>0777</directoryMode>
+      <includes>
+        <include>org.springframework.data:spring-data-neo4j-docs:*</include>
+      </includes>
+      <unpackOptions>
+        <includes>
+          <include>pdf/**</include>
+          <include>html/**</include>
+        </includes>
+      </unpackOptions>
     </dependencySet>
   </dependencySets>
 
