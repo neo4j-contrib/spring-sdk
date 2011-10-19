@@ -58,6 +58,8 @@ The Apache Software License, Version 2.0:
  Apache Felix:   Felix FileInstall, Felix Framework, Felix Main,
  Apache Verlocity,
  Apache Jackrabbit WebDAV API,
+ Bean Validation API,
+ cglib,
  JSON.simple,
  RRD4J,
  Geronimo Java Transaction API,
@@ -67,12 +69,14 @@ The Apache Software License, Version 2.0:
  Jetty:  Jetty, Jetty Util, Jetty Servlet Specification API,
  Quartz enterprise job scheduler,
  SNMP4J,
+ Spring Framework libraries,
  YodaTime,
 
 GNU Lesser General Public License (LGPL) 2.1:
- JRexx Regular Expressions library,
  Abeille Forms designer,
+ JRexx Regular Expressions library,
  GlazedLists,
+ Hibernate JPA 2.0 API
 
 MIT License:
  SLF4J API Module, SLF4J Log4j-12 Binding, SLF4J JDK1.4 Logging Binding,
@@ -97,6 +101,9 @@ BSD licence:
 provided without support or warranty: JSON (JavaScript Object Notation)
 
 Public domain:
+ aopalliance,
  Dough Lea's util.concurrent package,
  ANTLR 2.7.7,
  JSON2.js
+
+
