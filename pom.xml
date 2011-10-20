@@ -14,7 +14,7 @@
 
   <name>Neo4j - Spring SDK Assembler</name>
 
-  <version>1.5-SNAPSHOT</version>
+  <version>2.0.0.BUILD-SNAPSHOT</version>
   <description>This project assembles the Neo4j Spring SDK distribution,
     pulling together all the deliverable artifacts and packaging them 
       into a downloadable installer.</description>
