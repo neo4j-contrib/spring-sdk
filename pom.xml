@@ -31,10 +31,8 @@
 
     <!-- other filter properties -->
     <wrapper.conf>conf/neo4j-wrapper.conf</wrapper.conf>
-    <neo4j.version>1.5-SNAPSHOT</neo4j.version>
+    <neo4j.version>1.5.M02</neo4j.version>
     <spring-data-neo4j.version>2.0.0.BUILD-SNAPSHOT</spring-data-neo4j.version>
-    <windows-wrapper.version>2-SNAPSHOT</windows-wrapper.version>
-    <windows-wrapper.filename>windows-service-wrapper-${windows-wrapper.version}.jar</windows-wrapper.filename>
     
     <!-- conf/neo4j-server.properties filter properties -->
     <org.neo4j.database.location>data/graph.db</org.neo4j.database.location>
@@ -194,8 +192,8 @@ terms of the relevant Commercial Agreement.
             </goals>
             <configuration>
               <header>Spring Data Neo4j</header>
-              <doctitle>Spring Data Neo4j API</doctitle>
-              <windowtitle>Spring Data Neo4j API</windowtitle>
+              <doctitle>Spring Data Neo4j ${project.version} API</doctitle>
+              <windowtitle>Spring Data Neo4j ${project.version} API</windowtitle>
               <sourcepath>${project.build.directory}/sdn-sources</sourcepath>
             </configuration>
           </execution>
@@ -219,6 +217,23 @@ terms of the relevant Commercial Agreement.
               <outputDirectory>${project.build.directory}/sdn-sources</outputDirectory>
               <includeArtifactIds>spring-data-neo4j,spring-data-neo4j-aspects,spring-data-neo4j-cross-store,spring-data-neo4j-rest</includeArtifactIds>
             </configuration>
+          </execution>
+          <execution>
+            <id>unpack-sdn-dist</id>
+            <phase>generate-resources</phase>
+            <goals><goal>unpack</goal></goals>
+             <configuration>
+               <artifactItems>
+                 <artifactItem>
+                  <groupId>org.springframework.data</groupId>
+                  <artifactId>spring-data-neo4j-dist</artifactId>
+                  <version>${spring-data-neo4j.version}</version>
+                  <type>zip</type>
+                  <outputDirectory>${project.build.directory}/sdn-dist</outputDirectory>
+                  <includes>*.*,**/*.*</includes>
+                 </artifactItem>
+               </artifactItems>
+             </configuration>
           </execution>
           <execution>
             <id>unpack-manpages</id>
@@ -410,6 +425,12 @@ terms of the relevant Commercial Agreement.
       <artifactId>spring-data-neo4j-docs</artifactId>
       <version>${spring-data-neo4j.version}</version>
       <type>tar.gz</type>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-neo4j-dist</artifactId>
+      <version>${spring-data-neo4j.version}</version>
+      <type>zip</type>
     </dependency>
   </dependencies>
 

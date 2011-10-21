@@ -68,6 +68,15 @@
         <include>UPGRADE.txt</include>
       </includes>
     </fileSet>
+    <!-- changelog -->
+    <fileSet>
+      <directory>target/sdn-dist/spring-data-neo4j-${project.version}</directory>
+      <outputDirectory>/</outputDirectory>
+      <fileMode>0644</fileMode>
+      <includes>
+        <include>changelog.txt</include>
+      </includes>
+    </fileSet>
     <!-- die manpages -->
     <fileSet>
       <directory>target/manpages-enterprise</directory>
@@ -77,6 +86,12 @@
       <includes>
         <include>*.txt</include>
       </includes>
+    </fileSet>
+    <!-- SDN javadocs -->
+    <fileSet>
+      <directory>target/apidocs</directory>
+      <outputDirectory>/doc/java/spring-data-neo4j</outputDirectory>
+      <fileMode>0644</fileMode>
     </fileSet>
   </fileSets>
 

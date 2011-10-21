@@ -27,8 +27,9 @@ http://wiki.neo4j.org/content/UDC
 References
 ----------
 
+* [Java API](/doc/java/api) -- offline javadoc for all components
+* [Spring Data Neo4j Java API](/doc/java/spring-data-neo4j) -- offline javadoc
 * [${neo4j-wiki.url.title}](${neo4j-wiki.url}) -- comprehensive documentation                
 * [${neo4j-components.url.title}](${neo4j-components.url}) -- documentation about each component
-* [Java API](/doc/java/api) -- offline javadoc for all components
 
 

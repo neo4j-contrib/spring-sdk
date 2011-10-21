@@ -1,9 +1,9 @@
-${sdk.fullname} ${neo4j.version}
-=======================================
+${sdk.fullname} ${spring-data-neo4j.version}
+========================================
 
-Welcome to ${sdk.fullname} release ${neo4j.version}, the best NOSQL database
+Welcome to ${sdk.fullname} release ${spring-data-neo4j.version}, the best NOSQL database
 for Spring Enterprise developers. This distribution of ${sdk.fullname} includes the 
-complete ${server.fullname} server plus everything you need to start building Spring 
+complete ${server.fullname} ${neo4j.version} server plus everything you need to start building Spring 
 applications that can model, persist and explore complex, highly-connected data.
 
 In the box
@@ -49,6 +49,7 @@ short operational and informational articles.
 Out on the internets, you'll find:
 
 * [${neo4j-home.url.title}](${neo4j-home.url})
+* [${neo4j-docs.url.title}](${neo4j-docs.url})
 * [${getting-started.url.title}](${getting-started.url})
 * [${neo4j-wiki.url.title}](${neo4j-wiki.url})
 * [${neo4j-components.url.title}](${neo4j-components.url})
@@ -59,9 +60,7 @@ directory will point you in the right direction.
 License(s)
 ----------
 Various licenses apply. Please refer to the LICENSE and NOTICE files for more
-detailed information. A full report regarding the licenses of all included
-dependencies is found in site/dependencies.html.
-
+detailed information.
 
 
 
